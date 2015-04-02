@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HeapSort.cpp" />
+    <ClCompile Include="QuickSort.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{28A103C4-3E5A-4C76-9CF3-70336740FDD9}</ProjectGuid>

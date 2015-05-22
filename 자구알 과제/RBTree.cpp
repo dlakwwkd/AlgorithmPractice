@@ -9,9 +9,9 @@
 
 enum Color
 {
+    BG = 240,
     RED = 207,
     BLACK = 15,
-    BG = 240,
 };
 
 struct Node
@@ -52,6 +52,7 @@ void    InitDialog();
 void    Gotoxy(int x, int y);
 void    Setcolor(int color);
 
+#define SHOW_CHANGE(tree) { PrintTree(tree); Beep(512, SLIDE_TIME); }
 
 
 int main()
@@ -121,9 +122,7 @@ void Insert(Tree* tree, Node* newNode)
     newNode->right = tree->nil;
     newNode->color = RED;
 
-    PrintTree(tree);
-    Beep(512, SLIDE_TIME);
-    
+    SHOW_CHANGE(tree);
     InsertFixup(tree, newNode);
 }
 
@@ -140,8 +139,7 @@ void InsertFixup(Tree* tree, Node* fixupNode)
                 uncleNode->color = BLACK;
                 fixupNode->parent->parent->color = RED;
                 fixupNode = fixupNode->parent->parent;
-                PrintTree(tree);
-                Beep(512, SLIDE_TIME);
+                SHOW_CHANGE(tree);
             }
             else
             {
@@ -164,8 +162,7 @@ void InsertFixup(Tree* tree, Node* fixupNode)
                 uncleNode->color = BLACK;
                 fixupNode->parent->parent->color = RED;
                 fixupNode = fixupNode->parent->parent;
-                PrintTree(tree);
-                Beep(512, SLIDE_TIME);
+                SHOW_CHANGE(tree);
             }
             else
             {
@@ -183,8 +180,7 @@ void InsertFixup(Tree* tree, Node* fixupNode)
     if (tree->root->color == RED)
     {
         tree->root->color = BLACK;
-        PrintTree(tree);
-        Beep(512, SLIDE_TIME);
+        SHOW_CHANGE(tree);
     }
 }
 
@@ -208,8 +204,7 @@ void LeftRotate(Tree* tree, Node* node)
 
     target->left = node;
     node->parent = target;
-    PrintTree(tree);
-    Beep(512, SLIDE_TIME);
+    SHOW_CHANGE(tree);
 }
 
 void RightRotate(Tree* tree, Node* node)
@@ -232,8 +227,7 @@ void RightRotate(Tree* tree, Node* node)
 
     target->right = node;
     node->parent = target;
-    PrintTree(tree);
-    Beep(512, SLIDE_TIME);
+    SHOW_CHANGE(tree);
 }
 
 
@@ -301,8 +295,7 @@ void DeleteFixup(Tree* tree, Node* fixupNode)
             {
                 sibling->color = RED;
                 fixupNode = fixupNode->parent;
-                PrintTree(tree);
-                Beep(512, SLIDE_TIME);
+                SHOW_CHANGE(tree);
             }
             else
             {
@@ -334,8 +327,7 @@ void DeleteFixup(Tree* tree, Node* fixupNode)
             {
                 sibling->color = RED;
                 fixupNode = fixupNode->parent;
-                PrintTree(tree);
-                Beep(512, SLIDE_TIME);
+                SHOW_CHANGE(tree);
             }
             else
             {
@@ -369,8 +361,7 @@ void Transplant(Tree* tree, Node* oldNode, Node* plantNode)
     if (plantNode != tree->nil)
         plantNode->parent = oldNode->parent;
 
-    PrintTree(tree);
-    Beep(512, SLIDE_TIME);
+    SHOW_CHANGE(tree);
 }
 
 Node* TreeMinimum(Tree* tree, Node* node)

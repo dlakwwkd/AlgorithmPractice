@@ -389,8 +389,8 @@ void PrintNode(Tree* tree, Node* node, COORD pos)
         return;
 
     int space = MAX_WIDTH / (int)(pow(2.0f, pos.Y + 1));
-    PrintNode(tree, node->left, { pos.X - space, pos.Y + 1 });
-    PrintNode(tree, node->right, { pos.X + space, pos.Y + 1 });
+    PrintNode(tree, node->left, { (SHORT)pos.X - (SHORT)space, (SHORT)pos.Y + (SHORT)1 });
+    PrintNode(tree, node->right, { (SHORT)pos.X + (SHORT)space, (SHORT)pos.Y + (SHORT)1 });
 
     Setcolor(node->color);
     Gotoxy(pos.X, pos.Y * 5);

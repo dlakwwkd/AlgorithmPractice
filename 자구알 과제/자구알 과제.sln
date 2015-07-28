@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sorting", "자구알 과제.vcxproj", "{28A103C4-3E5A-4C76-9CF3-70336740FDD9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "..\Test\Test.vcxproj", "{4EE2ACB7-7646-46E4-9669-1E2F849AC640}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynamicProgramming", "..\DynamicProgramming\DynamicProgramming.vcxproj", "{999728A2-443E-4A12-B5E7-59438C02F3FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +19,14 @@ Global
 		{28A103C4-3E5A-4C76-9CF3-70336740FDD9}.Debug|Win32.Build.0 = Debug|Win32
 		{28A103C4-3E5A-4C76-9CF3-70336740FDD9}.Release|Win32.ActiveCfg = Release|Win32
 		{28A103C4-3E5A-4C76-9CF3-70336740FDD9}.Release|Win32.Build.0 = Release|Win32
+		{4EE2ACB7-7646-46E4-9669-1E2F849AC640}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4EE2ACB7-7646-46E4-9669-1E2F849AC640}.Debug|Win32.Build.0 = Debug|Win32
+		{4EE2ACB7-7646-46E4-9669-1E2F849AC640}.Release|Win32.ActiveCfg = Release|Win32
+		{4EE2ACB7-7646-46E4-9669-1E2F849AC640}.Release|Win32.Build.0 = Release|Win32
+		{999728A2-443E-4A12-B5E7-59438C02F3FC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{999728A2-443E-4A12-B5E7-59438C02F3FC}.Debug|Win32.Build.0 = Debug|Win32
+		{999728A2-443E-4A12-B5E7-59438C02F3FC}.Release|Win32.ActiveCfg = Release|Win32
+		{999728A2-443E-4A12-B5E7-59438C02F3FC}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
